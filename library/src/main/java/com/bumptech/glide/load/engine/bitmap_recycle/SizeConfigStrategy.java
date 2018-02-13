@@ -118,7 +118,7 @@ public class SizeConfigStrategy implements LruPoolStrategy {
   private void decrementBitmapOfSize(Integer size, Bitmap removed) {
     Bitmap.Config config = removed.getConfig();
     if(config==null){
-      Log.w(this.getClass().getName(),new NullPointerException("Found Null Config, Switching to ARGB_8888"
+      Log.w(this.getClass().getName(),new NullPointerException("Found Null Bitmap.Config, Switching to ARGB_8888"
           + ", size: " + size
           + ", removed: " + logBitmap(removed)
           + ", this: " + this));
